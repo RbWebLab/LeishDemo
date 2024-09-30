@@ -1,3 +1,5 @@
+import Aura from '@primevue/themes/aura';
+
 export default defineNuxtConfig({
   ssr: true, // Enable SSR
   devtools: { enabled: true },
@@ -21,5 +23,12 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: 'netlify' // Ensures proper configuration for SSR on Netlify
+  },
+  primevue: {
+      options: {
+          theme: {
+              preset: Aura
+          }
+      }
   }
 })
