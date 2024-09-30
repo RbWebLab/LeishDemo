@@ -1,11 +1,8 @@
 [build]
-  command = "npm run build"
+  command = "npm run generate"  # Use `npm run generate` to build a static site
   publish = ".output/public"
-
-[functions]
-  directory = ".output/server"
 
 [[redirects]]
   from = "/*"
-  to = "/.netlify/functions/server"
+  to = "/index.html"
   status = 200

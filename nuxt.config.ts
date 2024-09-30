@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   components: true, // Ensure auto-import for components is enabled
