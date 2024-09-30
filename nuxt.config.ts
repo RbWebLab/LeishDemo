@@ -33,9 +33,6 @@ export default defineNuxtConfig({
         ]
       }
     }
-  },
-  nitro: {
-    preset: 'netlify'  // Add this to ensure Nuxt's Nitro uses Netlify as a preset
   }
 })
 

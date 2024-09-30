@@ -1,5 +1,5 @@
 [build]
-  command = "npm run generate"  # Use `npm run generate` to build a static site
+  command = "npm run generate"
   publish = ".output/public"
 
 [[redirects]]
