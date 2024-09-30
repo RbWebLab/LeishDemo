@@ -20,6 +20,19 @@ export default defineNuxtConfig({
   plugins: [
     '@/plugins/primevue.js', 
   ],
+  build: {
+    transpile: ['primevue']
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        external: [
+          'primevue/resources/primevue.min.css',
+          'primevue/resources/themes/saga-blue/theme.css'
+        ]
+      }
+    }
+  }
 })
 
 
