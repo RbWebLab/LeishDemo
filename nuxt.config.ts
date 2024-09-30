@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   components: true, // Ensure auto-import for components is enabled
@@ -32,6 +33,9 @@ export default defineNuxtConfig({
         ]
       }
     }
+  },
+  nitro: {
+    preset: 'netlify'  // Add this to ensure Nuxt's Nitro uses Netlify as a preset
   }
 })
 
