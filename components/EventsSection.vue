@@ -10,13 +10,10 @@
         </div>
       </div>
     </section>
-  </template>
+</template>
   
-  <script setup>
-  import { ref, onMounted } from 'vue'
-  import EventCard from '@/components/EventCard.vue'
-  
-  const eventItems = ref([])
+<script setup>
+const eventItems = ref([])
 const fetchError = ref(null)  // Error handling
 
 onMounted(async () => {

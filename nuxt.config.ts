@@ -1,39 +1,25 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
-  compatibilityDate: '2024-04-03',
+  ssr: true, // Enable SSR
   devtools: { enabled: true },
-  components: true, // Ensure auto-import for components is enabled
+  components: true, // Enable auto-import for components
   modules: [
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',
     '@primevue/nuxt-module'
   ],
   tailwindcss: {
-    exposeConfig: true, // This is important for Nuxt UI to use Tailwind config
+    exposeConfig: true
   },
   css: [
     '@/assets/css/tailwind.css',
-    'primevue/resources/themes/saga-blue/theme.css', // PrimeVue theme
-    'primevue/resources/primevue.min.css', // PrimeVue core CSS
-    'primeicons/primeicons.css', // PrimeIcons
   ],
   plugins: [
-    '@/plugins/primevue.js', 
+    '@/plugins/primevue.js',
   ],
   build: {
     transpile: ['primevue']
   },
-  vite: {
-    build: {
-      rollupOptions: {
-        external: [
-          'primevue/resources/primevue.min.css',
-          'primevue/resources/themes/saga-blue/theme.css'
-        ]
-      }
-    }
+  nitro: {
+    preset: 'netlify' // Ensures proper configuration for SSR on Netlify
   }
 })
-
-
